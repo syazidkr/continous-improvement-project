@@ -7,11 +7,11 @@ export default function DashboardLayout ({
   return (
     <div>
       {/* left */}
-      <div className="bg-">
+      <div className="bg-red-300">
         left side
       </div>
       {/* right */}
-      <div className="">
+      <div className="bg-blue-400">
         {children}
       </div>
     </div>
