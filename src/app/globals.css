@@ -3,3 +3,14 @@
 @tailwind utilities;
 
 @import "tailwindcss";
+
+@theme {
+  --color-midnightBlue: #004866;
+  --color-tropicalTeal: #2fA4A0;
+  --color-emeraldGreen: #3dc88a;
+  --color-goldenYellow: #ffd116;
+  --color-sunsetOrange: #e55620;
+  --color-crimsonRed: #b22234;
+  --color-peachPink: #ffb8a4;
+  --color-softBeige: #efe9dc;
+}

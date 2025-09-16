@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const sidebarMenu = [
   {
   title: "MENU",
@@ -116,8 +118,27 @@ const sidebarMenu = [
 
 const Sidebar = () => {
   return (
-    <div className="bg-red-300 text">
-      HELLO
+    <div className="flex flex-col">
+      <div>
+        <Image src="" alt=""/>
+      </div>
+      <div className="">
+        {sidebarMenu.map((item)=>(
+          <div className="pt-2 pl-2" key={item.title}>
+            <div className="text-gray-600 text-sm">
+              {item.title}
+            </div>
+            {item.items.map((item)=>(
+              <div key={item.label} className="flex items-center g-10 px-3 h-8">
+                <Image className="p-[2px] items-center text-center" src={item.icon} alt="" width={20} height={20}/>
+                <div className="hidden lg:block flex-1 pl-2 text-md">
+                  {item.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
