@@ -1,6 +1,14 @@
-const config = {
-  plugins: {
-    "@tailwindcss/postcss": {},
+
+/** @type {import('tailwindcss').Config} */
+const tailwindConfig = {
+  content: [
+    "./index.html",
+    "./src/**/*.{html,js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
   },
+  plugins: [],
 };
-export default config;
+
+export default tailwindConfig;
