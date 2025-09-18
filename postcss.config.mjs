@@ -1,14 +1,8 @@
-
-/** @type {import('tailwindcss').Config} */
-const tailwindConfig = {
-  content: [
-    "./index.html",
-    "./src/**/*.{html,js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
+const config = {
+  plugins: {
+    '@tailwindcss/postcss': {},
+    autoprefixer: {},
   },
-  plugins: [],
 };
 
-export default tailwindConfig;
+export default config;

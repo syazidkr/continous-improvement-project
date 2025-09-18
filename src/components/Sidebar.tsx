@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 const menuItems = [
-  // {
-  //   title: "MENU",
-    // items: [
+  {
+    title: "MENU",
+    items: [
       {
         icon: "/home.png",
         label: "Home",
@@ -86,44 +88,47 @@ const menuItems = [
         href: "/list/announcements",
         visible: ["admin", "teacher", "student", "parent"],
       },
-    // ],
-  // },
-  // {
-  //   title: "OTHER",
-  //   items: [
-  //     {
-  //       icon: "/profile.png",
-  //       label: "Profile",
-  //       href: "/profile",
-  //       visible: ["admin", "teacher", "student", "parent"],
-  //     },
-  //     {
-  //       icon: "/setting.png",
-  //       label: "Settings",
-  //       href: "/settings",
-  //       visible: ["admin", "teacher", "student", "parent"],
-  //     },
-  //     {
-  //       icon: "/logout.png",
-  //       label: "Logout",
-  //       href: "/logout",
-  //       visible: ["admin", "teacher", "student", "parent"],
-  //     },
-  //   ],
-  // },
+    ],
+  },
+  {
+    title: "OTHER",
+    items: [
+      {
+        icon: "/profile.png",
+        label: "Profile",
+        href: "/profile",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/setting.png",
+        label: "Settings",
+        href: "/settings",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/logout.png",
+        label: "Logout",
+        href: "/logout",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+    ],
+  },
 ];
 
 const Sidebar = () => {
     return (
         <div className="">
-            ini sidebar
-            {/* <ul>
-                {menuItems.map((item) => (
-                    <li key={item.label}>
-                        {item.label}
-                    </li>
+            {menuItems.map((item)=>(
+              <div key={item.title}>
+                {item.title}
+                {item.items.map((subItem)=>(
+                  <div key={subItem.label} className="flex items-center gap-2 p-2 hover:bg-gray-200 rounded cursor-pointer">
+                    <Image src={subItem.icon} alt={subItem.label} width={12} height={12}/>
+                    <span className="hidden lg:inline">{subItem.label}</span>
+                  </div>
                 ))}
-            </ul> */}
+              </div>
+            ))}
         </div>
     )
 }
