@@ -120,10 +120,12 @@ const Sidebar = () => {
         <div className="">
             {menuItems.map((item)=>(
               <div key={item.title}>
-                {item.title}
+                <div className="mt-6 mb-2 px-2 text-gray-500 font-semibold text-sm hidden lg:block">
+                  {item.title}
+                </div>
                 {item.items.map((subItem)=>(
-                  <div key={subItem.label} className="flex items-center gap-2 p-2 hover:bg-gray-200 rounded cursor-pointer">
-                    <Image src={subItem.icon} alt={subItem.label} width={12} height={12}/>
+                  <div key={subItem.label} className="flex items-center gap-2 p-2 hover:bg-gray-200 rounded cursor-pointer h-8">
+                    <Image src={subItem.icon} alt={subItem.label} width={20} height={20}/>
                     <span className="hidden lg:inline">{subItem.label}</span>
                   </div>
                 ))}
