@@ -1,9 +1,10 @@
 import Sidebar from "@/components/Sidebar"
+import Table from "@/components/Table"
 
 const Test = () => {
     return (
-        <div>
-            
+        <div className="p-4">
+            <Table />
         </div>
     )
 }
