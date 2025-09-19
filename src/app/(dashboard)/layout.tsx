@@ -10,10 +10,10 @@ export default function DashboardLayout({
   return (
    <div className="flex min-h-screen">
       {/* LEFT */}
-      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4">
-        <Link href="/" className="flex items-center justify-center lg:justify-start gap-2">
+      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4 !important">
+        <Link href="/" className="flex items-center justify-center lg:justify-start gap-1">
           <Image src="/new logo.png" alt="logo" width={60} height={60}></Image> 
-          <span className="hidden lg:block font-bold">ZENITH</span>      
+          <span className="hidden lg:block font-bold text-xl">ZENITH</span>      
         </Link>
         <Sidebar />
       </div>
